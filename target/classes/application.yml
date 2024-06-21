@@ -1,0 +1,35 @@
+#配置端口号
+server:
+  port: 8080
+
+#jdbc数据源
+spring:
+  #  连接数据库的数据源
+  datasource:
+    username: root
+    password: uaqg6243
+    #?serverTimezone=UTC解决时区的报错
+    url: jdbc:mysql://localhost:3306/myfile?serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    关闭缓存
+  thymeleaf:
+    cache: false
+#文件上传的配置
+  servlet:
+    multipart:
+      enabled: true
+      #允许上传的单个文件大小
+      max-file-size: 1GB
+
+#扫描mapper配置
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.nyist.model
+
+
+
+
+
+
+
+

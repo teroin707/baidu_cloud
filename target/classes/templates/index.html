@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>云盘</title>
+    <link rel="icon" th:href="@{/ico/title.ico}" type="image/x-icon"/>
+    <link rel="bookmark" th:href="@{/ico/title.ico}" type="image/x-icon"/>
+    <link rel="stylesheet" th:href="@{/css/indexstyle.css}">
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
+</head>
+<body>
+<!--左侧导航栏-->
+<div id="curtain"></div>
+
+<div id="mainwin" class="left-navigation">
+    <ul class="topul">
+        <li class="navigation" onclick="onclick01(0)">
+            <a class="navigationlink" th:href="@{/files/findallfiles}" target="showoff">
+                <span class="txtt"><i class="layui-icon layui-icon-file" style="font-size: 20px"></i></span>
+                <span class="txtd">文件</span>
+            </a>
+        </li>
+        <li class="navigation" onclick="onclick01(1)">
+            <a class="navigationlink" th:href="@{/files/findallimages}" target="showoff">
+                <span class="txtt"><i class="layui-icon layui-icon-picture" style="font-size: 20px"></i></span>
+                <span class="txtd">相册</span>
+            </a>
+        </li>
+        <li class="navigation" onclick="onclick01(2)">
+            <a class="navigationlink" th:href="@{/files/findallfavorites}" target="showoff">
+                <span class="txtt"><i class="layui-icon layui-icon-star" style="font-size: 20px"></i></span>
+                <span class="txtd">收藏夹</span>
+            </a>
+        </li>
+        <li class="navigation" onclick="onclick01(5)">
+            <a class="navigationlink" th:href="@{/files/findallrecycles}" target="showoff">
+                <span class="txtt"><i class="layui-icon layui-icon-delete" style="font-size: 20px"></i></span>
+                <span class="txtd">回收站</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="right-main">
+    <iframe name="showoff" th:src="@{/files/findallfiles}" overflow="no" scrolling="no" frameborder="0"></iframe>
+</div>
+<script th:src="@{/js/jquery-3.6.0.js}"></script>
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/ajaxindex.js}"></script>
+<script th:src="@{/layui/layui.js}"></script>
+</body>
+</html>
